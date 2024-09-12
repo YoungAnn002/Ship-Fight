@@ -5,14 +5,20 @@
 Ship::Ship(int given_length){
     size = given_length;
     health = given_length;
+    og_health = given_length;
 }
 
 int Ship::Hit(){
     health--;
     if(health == 0){
+        if(og_health > 4){
+            std::cout << "You got the T-ship!" << std::endl;
+            return 1;
+        }
         std::cout << "You got the " << size << " long ship!" << std::endl;
         return 1;
     }
+    
     return 0;
 }
 
@@ -196,6 +202,7 @@ void Ship::AssignCoords(vector<vector<char>> &usable_coords, int seed){
 T_Ship::T_Ship(int given_length){
     size = given_length;
     health = given_length + 2;
+    og_health = given_length + 2;
 }
 
 void T_Ship::AssignCoords(std::vector<std::vector<char>> &usable_coords, int seed){

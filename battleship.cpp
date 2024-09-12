@@ -92,12 +92,13 @@ int main(){
     Ship average_ship(3);
 
     t_ship.AssignCoords(usable_coords, 4);
-    // for(int i = 0; i < t_ship.placement.size(); i++){
-    //     for(auto i : t_ship.placement.at(i)){
-    //         cout << i.first << " , " << i.second << endl;
-    //     }
-    // }
+    for(int i = 0; i < t_ship.placement.size(); i++){
+        for(auto i : t_ship.placement.at(i)){
+            cout << i.first << " , " << i.second << endl;
+        }
+    }
     ships.push_back(t_ship);
+    
 
     // small_ship.TestAssign(usable_coords, 2, 4, 3);
     small_ship.AssignCoords(usable_coords, 2);

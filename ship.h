@@ -16,6 +16,7 @@ class Ship{
     protected:
     int size = 0;
     int health = 0;
+    int og_health = 0;
     
 
     public:
