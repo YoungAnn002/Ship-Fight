@@ -1,0 +1,5 @@
+The .exe might not work without visual studio so if you want to try compiling it yourself
+here's how you compile with g++
+
+g++ battleship.cpp ship.cpp -o battleship
+./battleship

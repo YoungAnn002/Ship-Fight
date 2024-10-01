@@ -1,5 +1,5 @@
 #include <iostream>
-#include "ship.cpp"
+#include "ship.h"
 
 using namespace std;
 
@@ -19,7 +19,7 @@ int Shoot(vector<Ship> &ships, vector<map<int, char>> &hit_shots, vector<map<int
         cout << "Please enter coordinates to fire at like this: 2, A (number first then letter)" << endl;
         cout << "You can enter numbers 1-10 and A-J" << endl;
         getline(cin, coords);
-
+        // cout << coords.size() << endl;
         if(coords.size() == 4){
             int y = coords.at(0) - 48;
             char x = coords.at(3);
@@ -92,11 +92,11 @@ int main(){
     Ship average_ship(3);
 
     t_ship.AssignCoords(usable_coords, 4);
-    for(int i = 0; i < t_ship.placement.size(); i++){
-        for(auto i : t_ship.placement.at(i)){
-            cout << i.first << " , " << i.second << endl;
-        }
-    }
+    // for(int i = 0; i < t_ship.placement.size(); i++){
+    //     for(auto i : t_ship.placement.at(i)){
+    //         cout << i.first << " , " << i.second << endl;
+    //     }
+    // }
     ships.push_back(t_ship);
     
 
